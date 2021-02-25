@@ -158,6 +158,7 @@ public:
 	friend ostream& operator<<(ostream& out, CreditNegociat& c) {
 		out << endl << "Dobanda negociata este: " << c.dobandaNegociata;
 		out << endl << "Numarul de rate lunare: " << c.nrRateLunare;
+		//pentru acest if si else codul putea fi reformatat putin
 		if (c.nrRateLunare > 0) {
 			out << endl << "Valorile ratelor lunare sunt:";
 			for (int i = 0; i < c.nrRateLunare; i++)
@@ -168,6 +169,8 @@ public:
 	}
 
 };
+//aceasta portiune de cod putea fi stersa deoarece nu o mai folosim in codul final
+
 //ostream& operator<<(ostream& out, CreditNegociat& c) {
 //	out << endl << "Dobanda negociata este: " << c.dobandaNegociata;
 //	out << endl << "Numarul de rate lunare: " << c.nrRateLunare;

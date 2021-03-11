@@ -4,7 +4,6 @@ public class ArraySummingThread extends Thread {
 	private int[] array;
 	private int startIndex;
 	private int endIndex;
-	private long sum;
 	
 	public ArraySummingThread(int[] array, int startIndex,
 			int endIndex) {
@@ -13,6 +12,7 @@ public class ArraySummingThread extends Thread {
 		this.endIndex = endIndex;
 	}
 	
+	private long sum;
 	@Override
 	public void run() {
 		super.run();

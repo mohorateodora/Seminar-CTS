@@ -15,7 +15,6 @@ public class Main {
 
 	public static void main(String[] args) {
 		final int NB_OF_ELEMENTS = 500_000_000;
-		final int NB_OF_THREADS = 4;
 		
 		int[] array = new int[NB_OF_ELEMENTS];
 		
@@ -24,12 +23,13 @@ public class Main {
 		}
 		
 		long sum = 0;
-		long startTime = System.currentTimeMillis();
 		
 		for(int i = 0; i < NB_OF_ELEMENTS; i++) {
 			sum += array[i];
 		}
 		
+		
+		long startTime = System.currentTimeMillis();
 		long endTime = System.currentTimeMillis();
 		
 		System.out.printf("Sequantial sum=%d computed in %d ms\r\n", 
@@ -38,6 +38,7 @@ public class Main {
 		sum = 0;
 		startTime = System.currentTimeMillis();
 		
+		final int NB_OF_THREADS = 4;
 		ArraySummingThread[] threads = 
 				new ArraySummingThread[NB_OF_THREADS];
 		for(int i = 0; i < NB_OF_THREADS; i++) {
